@@ -1,0 +1,56 @@
+---
+import Card from "./Card.astro";
+---
+
+<main>
+  <div class="cards">
+    <h1>Artículos</h1>
+    <Card
+      src="/assets/logoreact.png"
+      title="Añadir Dark Mode en tu página de React"
+      href="/dark-mode-react"
+      body="Febrero de 2024"
+    />
+
+    <Card
+      src="/assets/logovscode.png"
+      title="Mi configuración de Visual Studio Code"
+      href="/vscode-config"
+      body="Febrero de 2024"
+    />
+
+    <Card
+      src="/assets/jslogo.png"
+      title="Crear menu hamburguesa para tu página"
+      href="/hamburger-menu"
+      body="Febrero de 2024"
+    />
+
+    <Card
+      src="/assets/logovscode.png"
+      title="Top 10 mejores extensiones para VSCode"
+      href="/extensions-vscode"
+      body="Febrero de 2024"
+    />
+  </div>
+</main>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+</style>

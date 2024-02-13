@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Dark Mode React">
+  <Header />
+  <main>
+    <div class="container">
+      <div class="title">
+        <h1>Añadir Dark Mode en tu página de React 🌙</h1>
+      </div>
+      <div class="text">
+        <p>
+          El modo oscuro sería una excelente adición a tu aplicación, ya que
+          enriquecería la experiencia del usuario. En esta ocasión, te mostraré
+          cómo implementarlo en React sin necesidad de utilizar ninguna librería
+          externa.
+        </p>
+      </div>
+      <div class="tutorial-1">
+        <h2>Primero creamos el proyecto.</h2>
+        <p>
+          Al proyecto lo llamaremos darkmode (le puedes poner el nombre que
+          quieras).
+        </p>
+        <p class="terminal">npx create-react-app darkmode</p>
+        <p>Una vez creado, navegamos al directorio que se acaba de crear.</p>
+        <p class="terminal">cd darkmode</p>
+        <p>Una vez dentro de la carpeta instalamos las dependencias.</p>
+        <p class="terminal">npm install</p>
+        <p>
+          Ahora abrimos el proyecto en un editor de codigo (en este caso en VS
+          Code)
+        </p>
+        <p class="terminal">code .</p>
+      </div>
+      <div class="tutorial-1">
+        <h2>Primeros pasos.</h2>
+        <p>En el archivo App.js vamos a crear un estado para el modo oscuro.</p>
+        <p class="terminal">const [darkMode, setDarkMode] = useState(true);</p>
+        <p>
+          Luego, vamos a crear una función que nos permita cambiar el estado del
+          modo oscuro.
+        </p>
+        <p class="terminal">
+          {
+            `const toggleDarkMode = () => {
+            setDarkMode(!darkMode);
+          }; `
+          }
+        </p>
+        <p>
+          Ahora vamos a crear un botón que nos permita cambiar el estado del
+          modo oscuro.
+        </p>
+        <p class="terminal">
+          {`<button onClick={toggleDarkMode}>Toggle Dark Mode</button>`}
+        </p>
+        <p>
+          A continuación, vamos a dar una clase al div principal con la clase
+          "App" y una clase adicional "dark-mode" para que cuando le demos click
+          al botón cambie el estado a true.
+        </p>
+        <p class="terminal">
+          {`<div className={\`App \${darkMode ? 'dark-mode' : ''}\`}>`}
+          <p>
+            Ahora vamos a crear una clase en el archivo App.css que nos permita
+            cambiar el color de fondo y el color de la letra.
+          </p>
+          <p class="terminal">
+            {
+              `
+          .dark-mode {
+            background-color: #1e1e1e;
+            color: white;
+          }
+          `
+            }
+          </p>
+        </p>
+      </div>
+      <div class="tutorial-1">
+        <p>
+          Si hemos seguido los pasos correctamente, deberíamos tener algo como
+          esto:
+        </p>
+        <img src="/assets/appdarkmode.png" alt="darkmode" />
+        <img src="/assets/appdarkmodecss.png" alt="darkmode" />
+      </div>
+      <div class="tutorial-1">
+        <h2>Conclusión</h2>
+        <p>
+          Como puedes ver, añadir el modo oscuro a tu aplicación de React es
+          bastante sencillo. No necesitas de ninguna librería externa para
+          implementarlo. Si tienes alguna duda, no dudes en dejarme un
+          comentario.
+        </p>
+        <img src="/assets/darkmodegif.gif" alt="darmodegif" />
+      </div>
+      <div class="goback">
+        <a href="/"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-back-up"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M9 14l-4 -4l4 -4"></path><path d="M5 10h11a4 4 0 1 1 0 8h-1"
+            ></path></svg
+          > Volver al blog</a
+        >
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+  .container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .title {
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 50px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+
+  .tutorial-1 {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .terminal {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 700px;
+    border-radius: 5px;
+  }
+
+  .goback {
+    padding-top: 20px;
+    display: flex;
+  }
+
+  .goback a {
+    width: auto;
+    background-color: rgb(65, 71, 80);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    border: 1px solid #bdbdbd;
+  }
+
+  .goback a:hover {
+    background-color: rgb(91, 97, 107);
+  }
+</style>
