@@ -3,6 +3,9 @@ import Card from "./Card.astro";
 ---
 
 <main>
+  <div class="tkcoder">
+    <h1>TkCoder</h1>
+  </div>
   <div class="cards">
     <h1>Artículos</h1>
     <Card
@@ -32,6 +35,13 @@ import Card from "./Card.astro";
       href="/extensions-vscode"
       body="Febrero de 2024"
     />
+
+    <Card
+      src="/assets/windowslogo.png"
+      title="Como instalar Oh-My-Posh en Windows"
+      href="/instalar-oh-my-posh-windows"
+      body="Febrero de 2024"
+    />
   </div>
 </main>
 
@@ -44,7 +54,18 @@ import Card from "./Card.astro";
     height: 100vh;
   }
 
-  h1 {
+  .tkcoder h1 {
+    text-align: center;
+    font-size: 6rem;
+    padding-bottom: 30px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4fcaf0, #f70ae3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #0000;
+  }
+
+  .cards h1 {
     font-size: 20px;
     font-weight: 500;
   }
@@ -53,5 +74,11 @@ import Card from "./Card.astro";
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  @media screen and (max-width: 415px) {
+    .tkcoder h1 {
+      font-size: 5rem;
+    }
   }
 </style>
