@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Dark Mode React">
@@ -119,6 +120,7 @@ import Header from "../components/Header.astro";
       </div>
     </div>
   </main>
+  <Footer />
 </Layout>
 
 <style>
@@ -188,5 +190,15 @@ import Header from "../components/Header.astro";
 
   .goback a:hover {
     background-color: rgb(91, 97, 107);
+  }
+
+  @media screen and (max-width: 1700px) {
+    .container {
+      width: 80%;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+    }
   }
 </style>
