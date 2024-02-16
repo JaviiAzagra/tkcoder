@@ -55,4 +55,35 @@ const { href, title, body, src } = Astro.props;
   p {
     font-size: 14px;
   }
+
+  @media screen and (max-width: 650px) {
+    .link-card {
+      width: 400px;
+    }
+    a {
+      width: 400px;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .link-card {
+      width: 350px;
+    }
+    a {
+      width: 350px;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
 </style>
